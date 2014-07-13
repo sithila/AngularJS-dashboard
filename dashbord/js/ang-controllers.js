@@ -38,12 +38,39 @@ dashboardApp.directive('chart', function() {
                 backgroundOpacity: 0.5  
             },  
             points: {  
-                show: true,  
+                show: false,  
                 radius: 3  
-            },  
-            bars: {  
-                show: true  
-            }}
+            }, 
+			grid: {
+    borderWidth: {top: 0, right: 0, bottom: 1, left: 1},
+    borderColor: {top: "#FFF", left: "#ccc", bottom: "#ccc"},
+	hoverable: true
+},
+
+xaxis: {
+
+                            axisLabelUseCanvas: true,
+                            labelAngle: -90,
+  tickLength: 0,
+  axisLabel: 'Values x axis',
+    axisLabelUseCanvas: true,
+    axisLabelFontSizePixels: 11,
+    axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+    axisLabelPadding: 10,
+},
+yaxis: {
+   
+    axisLabel: 'Values y axis',
+    axisLabelUseCanvas: true,
+    axisLabelFontSizePixels: 11,
+    axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+    axisLabelPadding: 10,
+	axisLabelColor:"#ccc"
+},
+			bars: { show: true, fill: 1, fillColor: "#757dad", align:"center",barWidth: 0.05,lineWidth: 0 }, 
+			 color: {color:"#454d7d"}
+			}
+			
       scope.$watch('data', function() {
         if (scope.data.length > 0) {
           $.plot(elem, scope.data,options, {});
@@ -53,6 +80,8 @@ dashboardApp.directive('chart', function() {
     }
   };
 });
+
+
 
 dashboardApp.directive('chartk', function() {
   return {
@@ -65,16 +94,42 @@ dashboardApp.directive('chartk', function() {
     link: function(scope, elem, attrs) {
 		var options = {legend: {  
                 show: true,  
-                margin: 5,  
+                margin: 10,  
                 backgroundOpacity: 0.5  
             },  
             points: {  
-                show: true,  
-                radius: 10  
-            },  
-            bars: {  
-                show: true  
-            }}
+                show: false,  
+                radius: 3  
+            }, 
+			grid: {
+    borderWidth: {top: 0, right: 0, bottom: 1, left: 1},
+    borderColor: {top: "#FFF", left: "#ccc", bottom: "#ccc"},
+	hoverable: true
+},
+
+xaxis: {
+
+                            axisLabelUseCanvas: true,
+                            labelAngle: -90,
+  tickLength: 0,
+  axisLabel: 'Values x axis',
+    axisLabelUseCanvas: true,
+    axisLabelFontSizePixels: 11,
+    axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+    axisLabelPadding: 10,
+},
+yaxis: {
+   
+    axisLabel: 'Values y axis',
+    axisLabelUseCanvas: true,
+    axisLabelFontSizePixels: 11,
+    axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+    axisLabelPadding: 10,
+	axisLabelColor:"#ccc"
+},
+			bars: { show: true, fill: 1, fillColor: "#757dad", align:"center",barWidth: 0.2,lineWidth: 0 }, 
+			 color: {color:"#454d7d"}
+			}
       scope.$watch('data', function() {
         if (scope.data.length > 0) {
           $.plot(elem, scope.data,options, {});
@@ -99,13 +154,20 @@ dashboardApp.directive('charts', function() {
                 margin: 10,  
                 backgroundOpacity: 0.5  
             },  
-            points: {  
-                show: true,  
-                radius: 3  
-            },  
+            
             line: {  
                 show: true  
-            }}
+            },
+			grid: {
+    borderWidth: {top: 0, right: 0, bottom: 1, left: 1},
+    borderColor: {top: "#FFF", left: "#ccc", bottom: "#ccc"},
+	hoverable: true
+},
+
+	
+	colors:["#454d7d"]		
+			
+			}
       scope.$watch('data', function() {
         if (scope.data.length > 0) {
           $.plot(elem, scope.data,options, {});
