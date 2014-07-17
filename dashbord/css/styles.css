@@ -318,10 +318,6 @@ background-color:#D8DEEA;
 .slider-slide-wrap:nth-child(even) {
   
 }
-
-
-
-
 #next-slider {
     /*left: 100px;*/
 	float:right;
@@ -330,12 +326,9 @@ background-color:#D8DEEA;
 	background-position:34px -17px;
 }
 #prev-slider {
-	
-	
-	
-	
 	margin-left:10px;
-	
-	
 	background-position:30px 6px;
+}
+.advance-search{
+	width:670px;	
 }

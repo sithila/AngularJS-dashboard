@@ -23,12 +23,22 @@
               <span class="caret"></span>
               <span class="sr-only">Toggle Dropdown</span>
             </button>
-            <ul role="menu" class="dropdown-menu pull-right">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+            <ul role="menu" class="dropdown-menu advance-search pull-right">
+              <li>
+              
+           <div class="row " >
+           <div class="col-md-12">   	
+		<form>
+            <fieldset>
+                <input type="text"  id="name" name="name" class="input-block-level form-control " placeholder="Name"><br><br>
+                <input type="text" id="email" name="email" class="input-block-level form-control" placeholder="Email"><br><br>
+               <input type="text" id="email" name="email" class="input-block-level form-control" placeholder="Email"><br><br>
+                <button type="submit" class="btn btn-warning pull-right">Submit</button>
+            </fieldset>
+        </form>
+	</div></div>
+              </li>
+              
             </ul>
             <button tabindex="-1" class="btn btn-default ex-search" type="button"><i class="fa fa-search fa-4" style="color:#FFF;"></i></button>
             
@@ -239,6 +249,12 @@
 <script src="js/ang-services.js"></script>
 <script src="js/ang-scripts.js"></script>
 <script src="js/ang-controllers.js"></script>
+
+<script type="text/javascript">
+    $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
+</script>
 
 
 

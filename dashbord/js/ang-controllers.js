@@ -311,24 +311,24 @@ dashboardApp.controller('ApplicationListCtrl', ['$scope', '$http',
 
 dashboardApp.controller('homeController', ['$scope', '$routeParams',
   function($scope, $routeParams) {
-	  alert('hi');
+	  //alert('hi');
     $scope.phoneId = $routeParams.phoneId;
   }]);
   
   dashboardApp.controller('componentController', ['$scope', '$routeParams',
   function($scope, $routeParams) {
-	  alert('hi component');
+	  //alert('hi component');
     $scope.phoneId = $routeParams.phoneId;
   }]);
   
    dashboardApp.controller('contactusController', ['$scope', '$routeParams',
   function($scope, $routeParams) {
-	  alert('hi contact');
+	  //alert('hi contact');
     $scope.phoneId = $routeParams.phoneId;
   }]);
   
    dashboardApp.controller('chartsController', ['$scope', '$routeParams',
   function($scope, $routeParams) {
-	  alert('hi contact');
+	  //alert('hi contact');
     $scope.phoneId = $routeParams.phoneId;
   }]);

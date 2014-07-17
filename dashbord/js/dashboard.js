@@ -9,6 +9,12 @@ $(function() {
 	var midcontainer = $('.mid-content');
 	var collapseLink = $('.collapse-link');
 	var collapseRightbar = $('.collapse-link-rightbar');
+	
+	 $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
+	
+	
 	mainmenu.click(function(){
 		//alert();
     if ($(this).hasClass('active')){

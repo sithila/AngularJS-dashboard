@@ -161,6 +161,9 @@ piecharts{
 .search-bar {
 	padding:6px;
 }
+.advance-search{
+	width:670px;	
+}
 .header-nav {
 	padding-right:0px;
 }

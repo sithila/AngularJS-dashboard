@@ -142,7 +142,7 @@ chartpie{
 
 	$(function() {
 
-		var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+		var data = [ {label:"January", data:30 ,color:"#4072B4" }, {label:"Feb", data:50 ,color:"#4679BD" },{label:"Mar", data:10 ,color:"#4072B4" }, {label:"Apr", data:10 ,color:"#4679BD" }, {label:"May", data:25 ,color:"#4072B4" }, {label:"Jun", data:10 ,color:"#4679BD" } ];
 		var data2 = [{ label: "Series1",  data: 10},
 		{ label: "Series2",  data: 30},
 		{ label: "Series3",  data: 90},
@@ -157,12 +157,12 @@ chartpie{
 		{ label: "Series5",  data: 80},
 		{ label: "Series6",  data: 110} ];
 		
-		var data4 = [{ label: "Series1",  data: 10},
-		{ label: "Series2",  data: 30},
-		{ label: "Series3",  data: 90},
-		{ label: "Series4",  data: 70},
-		{ label: "Series5",  data: 80},
-		{ label: "Series6",  data: 110} ];
+		var data4 = [{ label: "Series1",  data: 10 ,color:"#4679BD"},
+		{ label: "Series2",  data: 30 ,color:"#4072B4"},
+		{ label: "Series3",  data: 90, color:"#4679BD"},
+		{ label: "Series4",  data: 70, color:"#4072B4"},
+		{ label: "Series5",  data: 80, color:"#4679BD"},
+		{ label: "Series6",  data: 110, color:"#4072B4"} ];
 		
 		var data6 = [{ label: "Series1",  data: 10},
 		{ label: "Series2",  data: 30},
@@ -207,14 +207,18 @@ chartpie{
     }
 });
 
-		$.plot("#placeholder", [ data ], {
+		$.plot("#placeholder", [ data2 ], {
 			series: {
-				bars: {
-					show: true,
-					barWidth: 0.6,
-					align: "center"
-				}
+				bars: { show: true, fill: 1, fillColor: "#757dad", align:"center",barWidth: 0.6,lineWidth: 0 }, 
+			 color: {color:"#454d7d"}
+			
+			
 			},
+			grid: {
+    borderWidth: {top: 0, right: 0, bottom: 1, left: 1},
+    borderColor: {top: "#FFF", left: "#ccc", bottom: "#ccc"},
+	hoverable: true
+},
 			xaxis: {
 				mode: "categories",
 				tickLength: 0
@@ -229,7 +233,7 @@ chartpie{
     }
 });
 
-$.plot('#placeholder3', data3, {
+$.plot('#placeholder3', data4, {
 				series: {
 					pie: { 
 						show: true
